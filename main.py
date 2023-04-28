@@ -170,7 +170,7 @@ def LDA(data_txt, test_txt, topic_count):
         topic = []
         docfre = {}
         for word in data:
-            a = random.randint(0, len(data_txt) - 1)  # 为每个单词赋予一个随机初始topic
+            a = random.randint(0, topic_count - 1)  # 为每个单词赋予一个随机初始topic
             topic.append(a)
             if '\u4e00' <= word <= '\u9fa5':
                 docfre[a] = docfre.get(a, 0) + 1  # 统计每篇文章的词频
